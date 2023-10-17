@@ -1,7 +1,7 @@
 class MinecraftForge {
   float versao;
 
-  void liberaCodigo() {
+  void LiberaCodigo() {
       // Implementação
   }
 }
