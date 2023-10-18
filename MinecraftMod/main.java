@@ -8,24 +8,22 @@ public class MinecraftLauncher {
         ModMinecraft mod = new ModMinecraft();
         
         System.out.print("Deseja iniciar o Minecraft? (s/n): ");
-        String resposta = scanner.nextLine();
-        if (resposta.equalsIgnoreCase("s")) {
-            minecraft.IniciarJogo();
-            System.out.println("Jogo iniciado!");
+        String jogar = scanner.nextLine();
+        if (jogar.equalsIgnoreCase("s")) {
+            minecraft.StartGame();
+            System.out.print("Deseja jogar com mods? (s/n): ");
+            modificar = scanner.nextLine();
+            if (modificar.equalsIgnoreCase("s")) {
+                forge.AcessCode(minecraft);
+                mod.ModGame();
+            } else {
+                System.out.println("Jogo iniciado sem mods.");
+            }
+            minecraft.PlayGame();
         } else {
             System.out.println("Minecraft não iniciado.");
             return;
         }
-
-        System.out.print("Deseja jogar com mods? (s/n): ");
-        resposta = scanner.nextLine();
-        if (resposta.equalsIgnoreCase("s")) {
-            forge.LiberaCodigo(minecraft);
-            System.out.println("Código liberado!");
-            mod.ModificarJogo();
-            System.out.println("Jogo modificado com sucesso!");
-        } else {
-            System.out.println("Jogo iniciado sem mods.");
-        }
+        
     }
 }

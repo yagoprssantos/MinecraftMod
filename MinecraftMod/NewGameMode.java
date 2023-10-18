@@ -7,8 +7,7 @@ class NewGamemode {
         // Se o gamemode estiver ligado, o  NewGamemodeMenu e o RemovePlaceBlockLimit serão ligados
         if (minecraft.initialized) {
             minecraft.gamemodes.put(4, "BetterBuild");
-            minecraft.code = true;
-            minecraft.blocklimit = false;
+            
         }
     }
 }

@@ -4,11 +4,12 @@ import java.util.Scanner;
 // Esta classe representa o jogo Minecraft
 class Minecraft {
     float version;
-    boolean initialized = false;
+    boolean initialized = false; 
     boolean code = false; //Significa que o código está bloqueado
-    boolean blocklimit = false;
+    boolean blocklimit = true; // Significa que o limite de blocos está ativado
     HashMap<Integer, String> gamemodes = new HashMap<>();
-//representa os modos de jogo presentes no minecraft
+    
+    // Representa os modos de jogo presentes no minecraft
     Minecraft() {
         gamemodes.put(0, "Survival");
         gamemodes.put(1, "Creative");
@@ -38,11 +39,14 @@ class Minecraft {
             System.out.print("Escolha uma opção: ");
             int opcao = scanner.nextInt();
             if (opcao == 0) {
-                break;
-            } else if (gamemodes.containsKey(opcao)) {
+                break
+            } else if (opcao == 4) {
+                System.out.println("Minecraft Modificado.\nIniciando mod...");
+                NewGamemodeMenu newGamemodeMenu = new NewGamemodeMenu();
+                newGamemodeMenu.CreateMenu();
+            }else if (gamemodes.containsKey(opcao)) {
                 String gamemode = gamemodes.get(opcao);
                 System.out.printf("Jogando no gamemode %s...\n", gamemode);
-                // Implementação para jogar no gamemode escolhido
             } else {
                 System.out.println("Opção inválida!");
             }
