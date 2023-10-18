@@ -1,7 +1,7 @@
 class RemovePlaceBlockLimit {
   int gameMode;
 
-  void removeLimiteDistancia() {
+  void RemovePlaceBlockLimit() {
       // Implementação
   }
 }

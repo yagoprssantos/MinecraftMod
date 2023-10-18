@@ -1,11 +1,12 @@
+//muitas classes apresentam o sistema de  desligar e desligar então fiz uma classe para que as outras possam herdar
 class ActivationMode {
-  String modo; // (on, off)
+  String interruptor; // (on, off)
 
   void liga() {
-      // Implementação
+      interruptor = true
   }
 
   void desliga() {
-      // Implementação
+      interruptor = false
   }
 }

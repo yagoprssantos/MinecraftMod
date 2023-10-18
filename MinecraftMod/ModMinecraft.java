@@ -1,7 +1,10 @@
 class ModMinecraft extends Minecraft {
-  String nome;
+    String nome;
 
-  void ModificarJogo() {
-      // Implementação
-  }
+    void ModificarJogo() {
+        if (this.initialized && this.code) {
+            NewGamemode newGamemode = new NewGamemode();
+            newGamemode.BetterBuild();
+        }
+    }
 }

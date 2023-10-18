@@ -1,8 +1,8 @@
-class NewGameModeMenu {
+class NewGamemodeMenu {
   int nameMode;
   String gameModeName;
 
-  void mostraInterface() {
+  void CreateMenu() {
       // Implementação
   }
 }
