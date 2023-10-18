@@ -29,6 +29,9 @@ class LimitingGrid {
     // Faz com que a grade sirva como um limitador para colocar blocos
     void LimitBlocks() {
         Scanner scanner = new Scanner(System.in);
+        ActivateX();
+        ActivateY();
+        ActivateZ();
         System.out.println("Coloque blocos dentro da nova grade criada:");
         for (int x = 0; x < GridX; x++) {
             for (int y = 0; y < GridY; y++) {

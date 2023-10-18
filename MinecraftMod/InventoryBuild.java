@@ -3,7 +3,7 @@ class InventoryBuild {
   float memoriaUsada;
   String armazenaEstruturas;
 //armazena um conjunto de blocos para ser usado depois, salvando um modelo que pode ser replicado
-  void colocaEstruturas() {
+  void Build() {
       // Implementação
   }
 }
